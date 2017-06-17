@@ -48,5 +48,9 @@ public class EventListener implements SerialPortEventListener {
 		}
 
 		log.debug("currentString: " + currentString);
+		
+		if (currentString.length() > 30) {
+			currentString = new StringBuilder();
+		}
 	}
 }
